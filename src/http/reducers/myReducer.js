@@ -1,4 +1,4 @@
-import { MY_ACTION_REQUEST, MY_ACTION_SUCCESS, MY_ACTION_FAIL } from './../actions/myAction';
+import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAIL } from './../actions/myAction';
 
 const initialState = {
 	// nothing here
@@ -6,28 +6,28 @@ const initialState = {
 
 const myReducer = (state = initialState, action) => {
 	switch (action.type) {
-		case MY_ACTION_REQUEST:
+		case LOGIN_REQUEST:
 		{
 			return {
 				...state,
-				myData: {
+				login: {
 					isLoading: true
 				}
 			};
 		}
-		case MY_ACTION_SUCCESS:
+		case LOGIN_SUCCESS:
 		{
-			console.info('REDUCER CALLED');
 			return {
 				...state,
-				myData: action?.response?.data
+				login: action?.response?.data,
+				credentials: action?.data
 			};
 		}
-		case MY_ACTION_FAIL:
+		case LOGIN_FAIL:
 		{
 			return {
 				...state,
-				myData: action?.error?.response?.data
+				login: action?.error?.response?.data
 			};
 		}
 		default:

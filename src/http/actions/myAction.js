@@ -1,30 +1,29 @@
 import { myService } from "../services/myService";
 
-export const MY_ACTION_REQUEST = 'MY_ACTION_REQUEST';
-export const MY_ACTION_SUCCESS = 'MY_ACTION_SUCCESS';
-export const MY_ACTION_FAIL = 'MY_ACTION_FAIL';
+export const LOGIN_REQUEST = 'LOGIN_REQUEST';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAIL = 'LOGIN_FAIL';
 
-const myAction = () => {
+const login = data => {
     const request = () => { 
-        console.info('MYACTION CALLED');
-        return { type: MY_ACTION_REQUEST }; 
+        return { type: LOGIN_REQUEST }; 
     }
-    const success = response => {
+    const success = (response, data) => {
         return {
-            type: MY_ACTION_SUCCESS, response
+            type: LOGIN_SUCCESS, response, data
         };
     }
     const failure = error => {
         return {
-            type: MY_ACTION_FAIL, error
+            type: LOGIN_FAIL, error
         };
     }
     return dispatch => {
-        dispatch(request());
+        dispatch(request(data));
         return myService()
         .then(
             response => {
-                dispatch(success(response));
+                dispatch(success(response, data));
             }
         ).catch(
             error => {
@@ -35,5 +34,5 @@ const myAction = () => {
 }
 
 export const myActions = {
-    myAction
+    login
 };
