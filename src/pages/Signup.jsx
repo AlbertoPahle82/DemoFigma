@@ -54,14 +54,14 @@ const Signup = () => {
 			</div>
 			<div className="login-form">
 				<form onSubmit={event => handleSubmit(event)}>
-				<div className="row">
+					<div className="row">
 						<label htmlFor="fullName">Full name</label>
 					</div>
 					<div className="row">
 						<input
 							name="fullName"
 							id="fullName"
-							type="fullName"
+							type="text"
 							value={signUpData?.fullName}
 							onChange={event => handleInputChange(event)}
 							required

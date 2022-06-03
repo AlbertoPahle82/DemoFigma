@@ -122,9 +122,99 @@ body {
 		height: 393px;
 		background-size: contain;
 	}
+
+	&.video-gallery {
+		width: 276px;
+		height: 155px;
+		background-size: contain;
+	}
+}
+
+/* VOICES */
+
+.voice {
+	width: 472px;
+	height: 71px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	&.asian {
+		background-image: url('../public/images/voice_asian.svg');
+	}
+	&.british {
+		background-image: url('../public/images/voice_british.svg');
+	}
+	&.american {
+		background-image: url('../public/images/voice_american.svg');
+	}
+}
+
+/* BACKGROUNDS */
+
+.uploadInput {
+	display: none;
+}
+
+.background {
+	width: 150px;
+	height: 84px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	&.custom {
+		img {
+			width: 150px;
+			height: 84px;
+			margin: 0;
+			padding: 0;
+		}
+	}
+	&.upload {
+		background-image: url('../public/images/Rectangle\ 3_bg.png');
+		display: block;
+		background-size: 150px;
+	}
+	&.office {
+		background-image: url('../public/images/Rectangle\ 4_bg.png');
+	}
+	&.space {
+		background-image: url('../public/images/Rectangle\ 5_bg.png');
+	}
+	&.noise {
+		background-image: url('../public/images/Rectangle\ 6_bg.png');
+	}
+	&.meetingroom {
+		background-image: url('../public/images/Rectangle\ 7_bg.png');
+	}
+	&.books {
+		background-image: url('../public/images/Rectangle\ 8_bg.png');
+	}
+	&.desk {
+		background-image: url('../public/images/Rectangle\ 9_bg.png');
+	}
 }
 
 /* STYLING */
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.9;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+.changeMessage {
+	background-image: url('../public/images/VectorArrowDown.svg');
+	width: 10px;
+	height: 6px;
+	background-size: 10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
 
 .selection {
 	ul {
