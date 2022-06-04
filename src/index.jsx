@@ -7,6 +7,9 @@ import store from './configuration/store';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// ADDED REDUX and REACT ROUTER PROVIDERS / WRAPPERS
+
 root.render(
 	<Provider store={store}>
 		<BrowserRouter>

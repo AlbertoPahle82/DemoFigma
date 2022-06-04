@@ -1,7 +1,7 @@
 import { Fragment, memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ROOT } from '../const/urls';
+import { ROOT, SIGNUP } from '../const/urls';
 import { menu } from './menu';
 
 const Navigator = memo(() => {
@@ -23,13 +23,13 @@ const Navigator = memo(() => {
 					(element, index) =>
 						{
 							if (element.name === 'home' && credentials && Object.keys(credentials)?.length > 0) {
-								return <span key={'menu_item_' + index} className="navigator-item">
+								return <span key={'menu_item_' + index} className="navigator-item home">
 									<i className={`figma-icon ${element.name}`} />
 									<span className="accessibility-hidden">{element.name}</span>
 								</span>
 							} else {
 								return (
-									location?.pathname === ROOT && element.visibleAtLogin === false
+									(location?.pathname === ROOT || location?.pathname === SIGNUP) && element.visibleAtLogin === false
 										? <Fragment key={'menu_item_' + index}></Fragment>
 										: <button
 											onClick={() => handleClickMenu(element.url)} key={'menu_item_' + index}

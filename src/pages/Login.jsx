@@ -1,10 +1,14 @@
-import { useCallback, useEffect, useState } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { EDITING, SIGNUP } from "../const/urls";
 import { myActions } from "../http/actions/myAction";
 
-const Login = () => {
+// LOGIN PAGE
+// DATA GET SAVED ON SUBMIT ON REDUX STORE
+// After submit you have to logoff (account section) to clear the saved data and logon again (or refresh page)
+
+const Login = memo(() => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const [loginData, setLoginData] = useState(
@@ -15,6 +19,7 @@ const Login = () => {
 	);
 	const loginResponse = useSelector(state => state?.login);
 
+	// FUNCTION TO CHANGE THE STATE
 	const handleInputChange = useCallback(event => {
 		const id = event.target.name;
 		const value = event.target.value;
@@ -30,6 +35,7 @@ const Login = () => {
 		dispatch(myActions.login(loginData));
 	}, [loginData]);
 
+	// CATCHING THE RESPONSE AND REDIRECT
 	useEffect(() => {
 		if (loginResponse?.success) {
 			navigate(EDITING);
@@ -83,6 +89,6 @@ const Login = () => {
 			</div>
 		</div>
 	);
-}
+});
 
 export default Login;

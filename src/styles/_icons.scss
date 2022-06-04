@@ -1,0 +1,115 @@
+/* ICONS */
+.figma-icon {
+	height: 44px;
+	width: 44px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: block;
+
+	&.home {
+		background-image: url('../../public/images/logo.svg');
+		background-size: 34px;
+	}
+
+	&.videos {
+		background-image: url('../../public/images/videos.svg');
+		background-size: 44px;
+		position: relative;
+	}
+
+	&.editing {
+		background-image: url('../../public/images/editing.svg');
+		background-size: 25px;
+		position: relative;
+    	left: 2px;
+	}
+
+	&.account {
+		background-image: url('../../public/images/account.svg');
+		background-size: 46px;
+		height: 46px;
+		width: 46px;
+	}
+	
+}
+
+.generic-icon {
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+	display: inline-block;
+
+	&.changeMessage {
+		background-image: url('../../public/images/VectorArrowDown.svg');
+		width: 10px;
+		height: 6px;
+		background-size: 10px;
+		margin-left: 20px;
+		top: -2px;
+	}
+
+	&.icon-arrow-closed {
+		background-image: url('../../public/images/accordion-closed-arrow.svg');
+		width: 11px;
+		height: 6px;
+		background-size: 11px;
+		top: -2px;		
+	}
+
+	&.icon-arrow-open {
+		background-image: url('../../public/images/accordion-open-arrow.svg');
+		width: 11px;
+		height: 6px;
+		background-size: 11px;
+		top: -2px;		
+	}
+
+	&.edit {
+		background-image: url('../../public/images/edit-icon.svg');
+		width: 32px;
+		height: 32px;
+		background-size: 32px;
+	}
+
+	&.PDF {
+		background-image: url('../../public/images/icon-PDF.svg');
+		width: 22px;
+		height: 25px;
+		background-size: 22px;
+	}
+}
+
+.plan-icon {
+	width: 9px;
+	height: 9px;
+	background-size: 9px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+	display: inline-block;
+	margin-right: 15px;
+	margin-top: 5px;
+
+	&.icon-yes {
+		background-image: url('../../public/images/yes.svg');
+	}
+
+	&.icon-no {
+		background-image: url('../../public/images/no.svg');
+	}
+}
+
+.selected {
+	.plan-icon {
+		&.icon-yes {
+			background-image: url('../../public/images/yesWhite.svg');
+		}
+	
+		&.icon-no {
+			background-image: url('../../public/images/noWhite.svg');
+		}
+	}
+}

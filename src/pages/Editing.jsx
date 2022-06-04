@@ -15,6 +15,11 @@ import EditingBackground from "./Editing/EditingBackground";
 import EditingMessage from "./Editing/EditingMessage";
 import { ACTOR, ALIGNMENT, BACKGROUND, VOICE } from "../const/tabSections";
 
+// BIG EDITING "ORCHESTRATOR PAGE"
+// IT CONTAINS OTHER SUBCOMPONENTS FOR ACTORS, VOICES etc...
+// TAB COMPONENT MANAGES THE INTERNAL NAVIGATION
+// ALL THE DATA GET SAVED INTO REDUX STORE AND CAN STAYS EVEN ON COMPONENT UNMOUNT, YOU CAN ADD MULTIPLE PROFILES AND CHECK ON VIDEOS SECTION
+
 const Editing = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
@@ -24,6 +29,7 @@ const Editing = () => {
 	// but thinking about a "real app", I preferred to split to manage better every single page
 	// I could also have made an unique editing component with more dynamic params but I thinked in a "real app"
 	// Actor editing tab could have way more internal behaviours compared to others or vice versa (ex. Background have upload function)
+	// Data structure ( initial state data ) stays into Editing/dataStructure multiple js
 	const [actorArr, setActorArr] = useState(actors);
 	const [voicesArr, setVoicesArr] = useState(voices);
 	const [alignmentArr, setAlignmentArr] = useState(alignments);

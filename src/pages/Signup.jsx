@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { EDITING, ROOT } from "../const/urls";
 import { myActions } from "../http/actions/myAction";
 
+// SAME LOGIC AS LOGIN but with more inputs
+
 const Signup = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();

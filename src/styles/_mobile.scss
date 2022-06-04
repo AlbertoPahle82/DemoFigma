@@ -1,0 +1,100 @@
+
+@media only screen and (max-width: 768px) { 
+	/* For mobile phones: */ 
+
+	.col-nav {
+		width: 100%;
+		position: fixed;
+		bottom: 0px;
+		height: 60px;
+		z-index: 10;
+
+		.navigator-container {
+			flex-direction: row;
+			height: 60px !important;
+			border: 0 none;
+			justify-content: space-evenly;
+			background-color: #fff;
+			-webkit-box-shadow: 1px -7px 15px -5px rgb(0 0 0 / 24%);
+			box-shadow: 1px -7px 15px -5px rgb(0 0 0 / 24%);
+
+			.navigator-item {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				&.home {
+					margin-bottom: 0px;
+				}
+
+				&.account {
+					position: relative;
+					bottom: 0;
+				}
+			}
+		}
+	}
+	
+	.col-content {
+		width: 100%;
+	}
+
+	.main-container {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 50px;
+			
+		h2 {
+			font-size: fontSizes.$sizteen;
+		}
+
+		button.btn-tab {
+			width: 100%;
+			text-align: left;
+		}
+
+		.overlay {
+			.message-editing-content {
+				margin-left: 3%;
+			}
+		} 
+
+		textarea {
+			min-height: 105px !important;
+			max-height: 105px !important;
+		}
+
+		.editing-core {
+			padding-right: 0px;
+			&.accounts {
+				.editing-tabs {
+					left: 0;
+				}
+				button.btn-tab {
+					width: 33%;
+					text-align: center;
+				}
+				form.profile-edit {
+					width: 100%;
+				}
+			}
+		}
+
+		.plans .plan-container {
+			flex: 0 0 240px;
+			left: 0px;
+			margin-bottom: 30px;
+		}
+
+		.billing-container table th, .billing-container table td {
+			padding-right: 40px;
+		}
+		
+	}
+
+
+	.col-8 {
+		width: 50%;
+	}
+
+}

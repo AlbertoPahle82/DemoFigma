@@ -1,584 +1,18 @@
 /* CUSTOM RESPONSIVE STYLING RESPONSIVE */
 /* I DECIDED TO NOT USE BOOTSTRAP OR FRAMEWORK TO BE MORE ON FOCUS ON THE OWN DEMO STYLE AND MORE LIGHTWEIGHT */
-/* For desktop: GLOBAL ELEMENTS*/ 
-.col-1 {width: 8.33%;} 
-.col-2 {width: 16.66%;} 
-.col-3 {width: 25%;} 
-.col-4 {width: 33.33%;} 
-.col-5 {width: 41.66%;} 
-.col-6 {width: 50%;} 
-.col-7 {width: 58.33%;} 
-.col-8 {width: 66.66%;} 
-.col-9 {width: 75%;} 
-.col-10 {width: 83.33%;} 
-.col-11 {width: 91.66%;} 
-.col-12 {width: 100%;}
 
-.col-nav {
-	width: 7.15%
-}
-
-.col-content {
-	width: 92.8%;
-}
-
-div {
-	box-sizing: border-box;
-}
-
-.flex-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-[class*="col-"] {
-	flex-grow: 1;
-	max-width: 100%;
-	box-sizing: border-box;
-} 
-
-body {
-	font-family: 'Poppins', Arial, Helvetica, sans-serif;
-	border: 0 none;
-    margin: 0;
-    padding: 0;
-	color: #000;
-
-	#root {
-		margin-top: 40px;
-	}
-}
-
-button {
-	border: 0px none;
-	cursor: pointer;
-}
-
-.mb-10 {
-	margin-bottom: 10px;
-}
-
-.mt-10 {
-	margin-top: 10px;
-}
-
-.mt-20 {
-	margin-top: 20px;
-}
-
-.mt-30 {
-	margin-top: 30px;
-}
-
-.mt-40 {
-	margin-top: 40px;
-}
-
-.ml-5 {
-	margin-left: 5px;
-}
-
-.ml-10 {
-	margin-left: 10px;
-}
-
-.ml-20 {
-	margin-left: 20px;
-}
-
-.mr-5 {
-	margin-right: 5px;
-}
-
-.mr-10 {
-	margin-right: 10px;
-}
-
-.mr-20 {
-	margin-right: 20px;
-}
-
-.mr-30 {
-	margin-right: 30px;
-}
-
-.disabled {opacity: 0.4;}
-
-.accessibility-hidden {
-	visibility: hidden;
-	display: none;
-	height: 0px;
-	width: 0px;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.text-right {
-	text-align: right;
-}
-
-/* COLORS */
-
-$Green: #46B13D;
-$WashedGreen: #b4eeaf;
-$DarkGreen: #1C7714;
-$White: #fff;
-$Grey: #999;
-$WashedWhite: #f1f1f1;
-$Blue: #3860AD;
-$WashedBlue: #EBF2FF;
-$DarkBlue: #181059;
-$Azure: #5C90F3;
-$Yellow: rgb(255, 196, 0);
-$Red: #EE6363;
-
-/* END COLORS */
-
-/* FONT SIZES */
-
-$twelve: 12px;
-$fourteen: 14px;
-$sizteen: 16px;
-$twentytwo: 22px;
-
-/* ICONS */
-.figma-icon {
-	height: 44px;
-	width: 44px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	display: block;
-
-	&.home {
-		background-image: url('../public/images/logo.svg');
-		background-size: 34px;
-	}
-
-	&.videos {
-		background-image: url('../public/images/videos.svg');
-		background-size: 44px;
-		position: relative;
-    	left: 2px;
-	}
-
-	&.editing {
-		background-image: url('../public/images/editing.svg');
-		background-size: 25px;
-		position: relative;
-    	left: 3px;
-	}
-
-	&.account {
-		background-image: url('../public/images/account.svg');
-		background-size: 46px;
-		height: 46px;
-		width: 46px;
-	}
-	
-}
-
-.generic-icon {
-	background-color: transparent;
-	margin: 0;
-	padding: 0;
-	background-repeat: no-repeat;
-	background-position: center center;
-	position: relative;
-	display: inline-block;
-
-	&.changeMessage {
-		background-image: url('../public/images/VectorArrowDown.svg');
-		width: 10px;
-		height: 6px;
-		background-size: 10px;
-		margin-left: 20px;
-		top: -2px;
-	}
-
-	&.icon-arrow-closed {
-		background-image: url('../public/images/accordion-closed-arrow.svg');
-		width: 11px;
-		height: 6px;
-		background-size: 11px;
-		top: -2px;		
-	}
-
-	&.icon-arrow-open {
-		background-image: url('../public/images/accordion-open-arrow.svg');
-		width: 11px;
-		height: 6px;
-		background-size: 11px;
-		top: -2px;		
-	}
-
-	&.edit {
-		background-image: url('../public/images/edit-icon.svg');
-		width: 32px;
-		height: 32px;
-		background-size: 32px;
-	}
-
-	&.PDF {
-		background-image: url('../public/images/icon-PDF.svg');
-		width: 22px;
-		height: 25px;
-		background-size: 22px;
-	}
-}
-
-.plan-icon {
-	width: 9px;
-	height: 9px;
-	background-size: 9px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	position: relative;
-	display: inline-block;
-	margin-right: 15px;
-	margin-top: 5px;
-
-	&.icon-yes {
-		background-image: url('../public/images/yes.svg');
-	}
-
-	&.icon-no {
-		background-image: url('../public/images/no.svg');
-	}
-}
-
-.selected {
-	.plan-icon {
-		&.icon-yes {
-			background-image: url('../public/images/yesWhite.svg');
-		}
-	
-		&.icon-no {
-			background-image: url('../public/images/noWhite.svg');
-		}
-	}
-}
-
-/* ACTORS */
-
-.actor {
-	width: 150px;
-	height: 84px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	border: #e8e8e8 1px solid;
-    border-radius: 6px;
-	
-	&.anna {
-		background-image: url('../public/images/Rectangle\ 3.png');
-	}
-	&.yoyo {
-		background-image: url('../public/images/Rectangle\ 4.png');
-		background-size: 150px;
-	}
-	&.skye {
-		background-image: url('../public/images/Rectangle\ 5.png');
-	}
-	&.mike {
-		background-image: url('../public/images/Rectangle\ 6.png');
-	}
-	&.vincent {
-		background-image: url('../public/images/Rectangle\ 7.png');
-	}
-	&.peter {
-		background-image: url('../public/images/Rectangle\ 8.png');
-	}
-	&.moy {
-		background-image: url('../public/images/Rectangle\ 9.png');
-	}
-
-	&.big-picture {
-		width: 100%;
-		height: 393px;
-		background-size: cover;
-		border: 0px none;
-		background-position: top center;
-	}
-
-	&.video-gallery {
-		width: 276px;
-		height: 155px;
-		background-size: cover;
-		border: 0px transparent;
-	}
-}
-
-.selected {
-	.actor {
-		border-color: $Blue;
-	}
-}
-
-/* VOICES */
-
-.voice {
-	width: 100%;
-	height: 71px;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-color: $WashedWhite;
-	border-radius: 6px;
-	border: 1px solid transparent;
-	
-	&.asian {
-		background-image: url('../public/images/voice_asian.svg');
-	}
-	&.british {
-		background-image: url('../public/images/voice_british.svg');
-	}
-	&.american {
-		background-image: url('../public/images/voice_american.svg');
-	}
-}
-
-.selected {
-	.voice {
-		border-color: $Blue;
-		background-color: $WashedBlue;
-	}
-}
-
-
-/* BACKGROUNDS */
-
-.uploadInput {
-	display: none;
-}
-
-.background {
-	width: 150px;
-	height: 84px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	border: transparent 1px solid;
-    border-radius: 6px;
-	overflow: hidden;
-	position: relative;
-	&.custom {
-		img {
-			width: 150px;
-			height: 84px;
-			margin: 0;
-			padding: 0;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-	}
-	&.upload {
-		background-image: url('../public/images/Rectangle\ 3_bg.png');
-		display: block;
-		background-size: 154px;
-		cursor: pointer;
-	}
-	&.office {
-		background-image: url('../public/images/Rectangle\ 4_bg.png');
-		background-size: 155px;
-	}
-	&.space {
-		background-image: url('../public/images/Rectangle\ 5_bg.png');
-	}
-	&.noise {
-		background-image: url('../public/images/Rectangle\ 6_bg.png');
-	}
-	&.meetingroom {
-		background-image: url('../public/images/Rectangle\ 7_bg.png');
-	}
-	&.books {
-		background-image: url('../public/images/Rectangle\ 8_bg.png');
-	}
-	&.desk {
-		background-image: url('../public/images/Rectangle\ 9_bg.png');
-	}
-}
-
-.selected {
-	.background {
-		border-color: $Blue;
-	}
-}
-
-/* STYLING */
-
-/* BUTTONS */
-
-button[class^='btn-'] {
-    height: 33px;
-    line-height: 33px;
-    border-radius: 6px;
-    padding: 0 20px;
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    font-size: 14px;
-	font-weight: 500;
-	transition: all 0.3s ease;
-	box-sizing: border-box;
-}
-
-button {
-	&.btn-green {
-		background-color: $Green;color: $White;
-		&:hover {
-			color: $DarkGreen;
-			background-color: $WashedGreen;
-		}
-	}
-
-	&.btn-grey {
-		background-color: $WashedWhite;
-		color: $Grey;
-		&:hover {
-			color: $White;
-			background-color: $Blue;
-		}
-	}
-
-	&.btn-tab {
-		background-color: transparent;
-		color: $Grey;
-
-		&.selected {
-			color: $Blue;
-		}
-
-		&:hover {
-			color: $White;
-			background-color: $Blue;
-		}
-	}
-
-	&.btn-text-blue {
-		color: $Blue;
-	}
-
-	&.btn-link {
-		background: transparent;
-		color: $Blue;
-		font-weight: 500;
-		padding: 0px;
-
-		&.btn-red {
-			color: $Red;
-		}
-
-		&:hover {
-			color: $DarkBlue;
-		}
-	}
-
-	&.btn-big {
-		height: 50px;
-		line-height: 50px;
-		padding-left: 50px;
-		padding-right: 50px;
-		font-size: 16px;
-		font-weight: 600;
-		border: 1px solid transparent;
-	}
-
-	&.btn-plans {
-		width: 100%;
-		font-size: 16px;
-		height: 48px;
-		font-weight: 600;
-		background-color: $WashedBlue;
-	}
-	
-}
-
-.selected {
-	button {
-		&.btn-big {
-			background-color: $WashedBlue;
-			color: $Blue;
-			border-color: $Blue;
-		}
-	}
-}
-
-
-/* BUTTONS END*/
-
-/* INPUTS */
-
-textarea {
-	background-color: transparent;
-    border: 0 none;
-    resize: none;
-    width: 100%;
-    min-height: 100px;
-    color: #999;
-	border-radius: 6px;
-}
-
-input, textarea {
-	transition: all 0.3s ease;
-	box-sizing: border-box;
-	font-family: "Poppins", Arial, Helvetica, sans-serif;
-}
-
-textarea:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px rgb(21 156 228 / 20%);
-}
-
-input {
-    height: 40px;
-    border-radius: 6px;
-    border: #999 1px solid;
-	font-weight: 500;
-}
-
-input:focus {
-	outline: none;
-    border-color: $Azure;
-}
-
-/* INPUTS END */
-
-/* FORM */
-
-.row {
-	margin-bottom: 6px;
-
-	label {
-		font-weight: 400;
-		line-height: 21px;
-		font-size: 14px;
-	}
-	input {
-		width: 100%;
-		padding: 0 15px;
-	}
-
-	&.align-content-between {
-		justify-content: space-between;
-		display: flex;
-		align-items: center;
-	}
-}
-
-.passStrength {
-	font-size: $twelve;
-	&.Strong {
-		color: $Green;
-	}
-	&.Poor {
-		color: $Yellow;
-	}
-	&.Error {
-		color: $Red;
-	}
-}
-
-/* FORM END */
+// global styling and variables
+// @use is the new way to @import that is going to be slowly deprecated
+@use 'styles/global';
+@use 'styles/colors' as colors;
+@use 'styles/font-sizes' as fontSizes;
+@use 'styles/icons';
+@use 'styles/assets';
+@use 'styles/buttons';
+@use 'styles/inputs';
+@use 'styles/form';
+
+// development SCSS / custom styling
 
 .overlay {
     position: fixed;
@@ -600,14 +34,14 @@ input:focus {
 			input.message-editing-header-input {
 				border: 0px none;
 				width: 100%;
-				font-size: $twentytwo;
-				color: $Blue;
+				font-size: fontSizes.$twentytwo;
+				color: colors.$Blue;
 				font-weight: 500;
 				border-radius: 0;
 			}
 			
 			input.message-editing-header-input:focus {
-				border-bottom: $WashedBlue 1px solid;
+				border-bottom: colors.$WashedBlue 1px solid;
 			}
 		}
 
@@ -639,11 +73,11 @@ input:focus {
 
 .tags {
 	span {
-		font-size: $fourteen;
+		font-size: fontSizes.$fourteen;
 		padding: 0 10px;
-		color: $Grey;
+		color: colors.$Grey;
 		height: 20px;
-		border: $Grey 1px solid;
+		border: colors.$Grey 1px solid;
 		border-radius: 6px;
 		margin-right: 10px;
 		line-height: 20px;
@@ -661,8 +95,8 @@ input:focus {
 
 .selection {
 	.accordion-container {
-		background-color: $White;
-		color: $Grey;
+		background-color: colors.$White;
+		color: colors.$Grey;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 		height: 45px;
 
@@ -692,8 +126,8 @@ input:focus {
 		}
 
 		&.accordion-selected {
-			background-color: $WashedBlue;
-			color: $Blue;
+			background-color: colors.$WashedBlue;
+			color: colors.$Blue;
 			border-bottom: 0 none;
 			height: auto;
 			padding: 15px 8px 0px 8px;
@@ -757,7 +191,7 @@ input:focus {
 
 			&.selected {
 				label.gallery-label {
-					color: $Blue;
+					color: colors.$Blue;
 				}
 			}
 		}
@@ -776,6 +210,9 @@ input:focus {
 		height: 60px;
 		background-color: transparent;
 		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
 		&.home {
 			margin-bottom: 45px;
@@ -906,7 +343,7 @@ input:focus {
 	}
 
 	h2 {
-		font-size: $twentytwo;
+		font-size: fontSizes.$twentytwo;
 		line-height: 33px;
 		margin-top: 0;
 		margin-bottom: 27px;
@@ -961,7 +398,7 @@ input:focus {
 
 	.plan-container {
 		flex: 0 0 260px;
-		font-size: $fourteen;
+		font-size: fontSizes.$fourteen;
 		line-height: 21px;
 		color: #333;
 		padding: 24px;
@@ -991,32 +428,32 @@ input:focus {
 		.currency {
 			font-size: 15px;
 			font-weight: 700;
-			color: $DarkBlue;
+			color: colors.$DarkBlue;
 			line-height: 45px;
 		}
 
 		.price {
 			font-size: 30px;
 			font-weight: 700;
-			color: $DarkBlue;
+			color: colors.$DarkBlue;
 			line-height: 45px;
 		}
 
 		.currentPlan {
-			color: $DarkGreen;
+			color: colors.$DarkGreen;
 			font-size: 20px;
 			font-weight: 600;
 		}
 
 		&.selected {
-			background-color: $Green;
-			color: $White;
+			background-color: colors.$Green;
+			color: colors.$White;
 			border-radius: 10px;
 			position: relative;
 			top: -24px;
 
 			.currency, .price  {
-				color: $White;
+				color: colors.$White;
 			}
 		}
 	}
@@ -1037,7 +474,7 @@ input:focus {
 		}
 
 		th {
-			color: $Grey;
+			color: colors.$Grey;
 			font-size: 14px;
 			font-weight: 600;
 			cursor: pointer;
@@ -1045,19 +482,6 @@ input:focus {
 	}
 }
 
+// Mobile Phone STYLES
 
-@media only screen and (max-width: 768px) { 
-	/* For mobile phones: */ 
-	[class*="col-"] { 
-		width: 90%;
-		margin-top: 35px;
-		margin-bottom: 10px;
-		flex-grow: 1;
-	}
-
-	.flex-container {
-		display: block;
-		flex-direction: none;
-		flex-wrap: none;
-	}
-}
+@import 'styles/mobile';

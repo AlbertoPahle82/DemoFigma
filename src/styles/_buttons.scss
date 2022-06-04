@@ -1,0 +1,99 @@
+@use 'colors' as colors;
+@use 'font-sizes' as fontSizes;
+/* BUTTONS */
+
+button[class^='btn-'] {
+    height: 33px;
+    line-height: 33px;
+    border-radius: 6px;
+    padding: 0 20px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+}
+
+button {
+	&.btn-green {
+		background-color: colors.$Green;color: colors.$White;
+		&:hover {
+			color: colors.$DarkGreen;
+			background-color: colors.$WashedGreen;
+		}
+	}
+
+	&.btn-grey {
+		background-color: colors.$WashedWhite;
+		color: colors.$Grey;
+		&:hover {
+			color: colors.$White;
+			background-color: colors.$Blue;
+		}
+	}
+
+	&.btn-tab {
+		background-color: transparent;
+		color: colors.$Grey;
+
+		&.selected {
+			color: colors.$Blue;
+		}
+
+		&:hover {
+			color: colors.$White;
+			background-color: colors.$Blue;
+		}
+	}
+
+	&.btn-text-blue {
+		color: colors.$Blue;
+	}
+
+	&.btn-link {
+		background: transparent;
+		color: colors.$Blue;
+		font-weight: 500;
+		padding: 0px;
+
+		&.btn-red {
+			color: colors.$Red;
+		}
+
+		&:hover {
+			color: colors.$DarkBlue;
+		}
+	}
+
+	&.btn-big {
+		height: 50px;
+		line-height: 50px;
+		padding-left: 50px;
+		padding-right: 50px;
+		font-size: 16px;
+		font-weight: 600;
+		border: 1px solid transparent;
+	}
+
+	&.btn-plans {
+		width: 100%;
+		font-size: 16px;
+		height: 48px;
+		font-weight: 600;
+		background-color: colors.$WashedBlue;
+	}
+	
+}
+
+.selected {
+	button {
+		&.btn-big {
+			background-color: colors.$WashedBlue;
+			color: colors.$Blue;
+			border-color: colors.$Blue;
+		}
+	}
+}
+
+
+/* BUTTONS END*/

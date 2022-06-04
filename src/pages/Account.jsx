@@ -9,6 +9,9 @@ import Billing from "./Account/Billing";
 import MyPlan from "./Account/MyPlan";
 import Profile from "./Account/Profile";
 
+// Same as Editing, Tab manages the internal navigation
+// Logout clears the login data, so you can logon again
+
 const Account = memo(() => {
 	const tabs = [PROFILE, MYPLAN, BILLING];
 	const [currentTab, setCurrentTab] = useState(tabs[0]);

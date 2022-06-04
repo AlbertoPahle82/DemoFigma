@@ -9,6 +9,10 @@ const Editing = lazy(() => import('./pages/Editing'));
 const Account = lazy(() => import('./pages/Account'));
 const Videos = lazy(() => import('./pages/Videos'));
 
+// SECTIONS ARE DIVIDED BY ROUTES - IMPORTING COMPONENTS WITH LAZY FOR BETTER PERFORMANCE
+// Memoizing most of components for better performances with memo()
+// Navigator component stays outside the routes to "orchestrate" all the navigation
+
 const App = memo(() => {
 	return (
 		<div className="flex-container">

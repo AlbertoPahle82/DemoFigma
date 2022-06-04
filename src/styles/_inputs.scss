@@ -1,0 +1,36 @@
+@use 'colors' as colors;
+@use 'font-sizes' as fontSizes;
+/* INPUTS */
+
+textarea {
+	background-color: transparent;
+    border: 0 none;
+    resize: none;
+    width: 100%;
+    min-height: 100px;
+    color: #999;
+	border-radius: 6px;
+}
+
+input, textarea {
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+	font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgb(21 156 228 / 20%);
+}
+
+input {
+    height: 40px;
+    border-radius: 6px;
+    border: #999 1px solid;
+	font-weight: 500;
+}
+
+input:focus {
+	outline: none;
+    border-color: colors.$Azure;
+}
