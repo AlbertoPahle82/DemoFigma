@@ -56,8 +56,8 @@ const Login = () => {
 							required
 						/>
 					</div>
-					<div className="row">
-						<label htmlFor="password">Password</label><button className="btn-link">Forgot?</button>
+					<div className="row align-content-between mt-20">
+						<label htmlFor="password">Password</label><button type="button" className="btn-link">Forgot?</button>
 					</div>
 					<div className="row">
 						<input
@@ -69,8 +69,8 @@ const Login = () => {
 							required
 						/>
 					</div>
-					<div className="row text-center">
-						<button className="btn-green" disabled={loginResponse?.isLoading}>
+					<div className="row text-center mt-30">
+						<button type="submit" className="btn-green" disabled={loginResponse?.isLoading}>
 							{
 								loginResponse?.isLoading ? 'Loading...' : 'Login'
 							}
@@ -79,7 +79,7 @@ const Login = () => {
 				</form>
 			</div>
 			<div className="login-signup">
-				<label htmlFor="signup">New here?</label><button id="signup" className="btn-link" onClick={() => navigate(SIGNUP)}>Signup</button>
+				<label htmlFor="signup">New here? </label><button id="signup" className="btn-link" onClick={() => navigate(SIGNUP)}>Signup</button>
 			</div>
 		</div>
 	);

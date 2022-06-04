@@ -12,24 +12,27 @@ const Videos = () => {
 					<h2>Saved Videos</h2>
 				</div>
 				<div className="col-4 text-right">
-					<button color="btn-green" onClick={() => {navigate(EDITING)}}>Create New</button>
+					<button className="btn-green" onClick={() => {navigate(EDITING)}}>Create New</button>
 				</div>
 			</div>
-			{
-				list?.length > 0 && list.map(
-					(element, index) => <div key={'video_el_'+index}>
-						<div className={`video-gallery actor ${element?.actor.toLowerCase()}`}>
-							<span className="accessibility-hidden">{element?.actor}</span>
+			<div className="video-gallery-container">
+				{
+					list?.length > 0 && list.map(
+						(element, index) => <div className="video-preview-container" key={'video_el_'+index}>
+							<div className={`video-gallery actor ${element?.actor.toLowerCase()}`}>
+								<span className="accessibility-hidden">{element?.actor}</span>
+							</div>
+							<p className="text-center">{element?.title}</p>
+							<p className="tags">
+								<span className="tag small">Email</span>
+								<span className="tag small">Marketing</span>
+								<span className="tag small">Greeting</span>
+							</p>
+							<button className="edit-video">...</button>
 						</div>
-						<p className="text-center">{element?.title}</p>
-						<p>
-							<span className="tag small">Email</span>
-							<span className="tag small">Marketing</span>
-							<span className="tag small">Greeting</span>
-						</p>
-					</div>
-				)
-			}
+					)
+				}
+			</div>
 		</div>
 	);
 }

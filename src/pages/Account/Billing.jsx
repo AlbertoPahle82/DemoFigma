@@ -40,7 +40,7 @@ const Billing = memo(() => {
 					<tr>
 						<th onClick={() => sortBillingData('refId')}>REFERENCE ID</th>
 						<th onClick={() => sortBillingData('date')}>DATE</th>
-						<th onClick={() => sortBillingData('amount')}>AMOUNT</th>
+						<th onClick={() => sortBillingData('amount')}>AMOUNT {order?.current}</th>
 						<th>INVOICE</th>
 					</tr>
 				</thead>
@@ -52,9 +52,9 @@ const Billing = memo(() => {
 								<td>{element?.refId}</td>
 								<td>{element?.date}</td>
 								<td>{element?.amount}</td>
-								<td>
-									<button>
-										<i className={element?.invoice} />
+								<td className="text-center">
+									<button className="btn-link">
+										<i className={`generic-icon ${element?.invoice}`} />
 										<span className="accessibility-hidden">{element?.invoice}</span>
 									</button>
 								</td>

@@ -12,10 +12,10 @@ const Videos = lazy(() => import('./pages/Videos'));
 const App = memo(() => {
 	return (
 		<div className="flex-container">
-			<div className="col-1">
+			<div className="col-nav">
 				<Navigator/>
 			</div>
-			<div className='col-11'>
+			<div className='col-content main-container'>
 				<Suspense fallback={<div>Loading...</div>}>
 					<Routes>
 						<Route path={ROOT} element={<Login />} />

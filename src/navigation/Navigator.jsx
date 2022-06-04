@@ -12,10 +12,12 @@ const Navigator = memo(() => {
 	});
 
 	const credentials = useSelector(state => state?.credentials);
-	console.info('LOCATION', location);
+
+	// innerheight - margin top and other stylistic margins
+	const navHeight = window.innerHeight - 80;
 
 	return (
-		<div className="navigator-container">
+		<div className="navigator-container" style={{height: navHeight+'px'}}>
 			{
 				menu?.length > 0 && menu.map(
 					(element, index) =>
@@ -29,7 +31,10 @@ const Navigator = memo(() => {
 								return (
 									location?.pathname === ROOT && element.visibleAtLogin === false
 										? <Fragment key={'menu_item_' + index}></Fragment>
-										: <button onClick={() => handleClickMenu(element.url)} key={'menu_item_' + index} className="navigator-item">
+										: <button
+											onClick={() => handleClickMenu(element.url)} key={'menu_item_' + index}
+											className={`navigator-item ${element.name} ${element.url === location.pathname ? ' selected' : ''}`}
+										>
 											<i className={`figma-icon ${element.name}`} />
 											<span className="accessibility-hidden">{element.name}</span>
 										</button>

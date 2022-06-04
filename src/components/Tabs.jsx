@@ -13,7 +13,7 @@ const Tabs = memo(props => {
 				tabArray?.length > 0 && tabArray.map(
 					(tab, index) => <button
 						key={'tab_'+tab+index}
-						className={`btn ${tab === current ? 'selected' : ''}`}
+						className={`btn-tab ${tab === current ? 'selected' : ''}`}
 						onClick={() => changeCurrentTab(tab)}
 					>
 						{tab}

@@ -63,21 +63,30 @@ const Editing = () => {
 			<div className="editing-header flex-container">
 				<div className="col-8">
 					<h2>{userTitle}</h2>
-					<button className="changeMessage" onClick={() => {setEditMessageMode(true)}}>
+					<button className="generic-icon changeMessage" onClick={() => {setEditMessageMode(true)}}>
 						<span className="accessibility-hidden">Change</span>
 					</button>
 				</div>
 				<div className="col-4 text-right">
-					<button color="btn-grey" onClick={() => {navigate(VIDEOS)}}>Cancel</button>
-					<button color="btn-green" onClick={() => handleSave()}>Save</button>
+					<button className="btn-grey mr-20" onClick={() => {navigate(VIDEOS)}}>Cancel</button>
+					<button className="btn-green mr-5" onClick={() => handleSave()}>Save</button>
 				</div>
 			</div>
 			
 			<div className="editing-core flex-container">
-				<div className="col-7">
-					<div className={`actor big-picture ${currentSelectedActor()}`}></div>
+				<div className="edit-profile-col-60">
+					<div className="big-picture-container">
+						<div className={`actor big-picture ${currentSelectedActor()}`}>
+							<button className="btn-grey btn-text-blue preview-button">Preview</button>
+						</div>
+						<div className="listen-videoscript">
+							<textarea id="listen" defaultValue="Type or paste your videoscript here. You can also request a translation of 
+								an English script to any of 27 other languages" />
+							<button className="btn-grey mt-10">Listen</button>
+						</div>
+					</div>
 				</div>
-				<div className="col-5 selection">
+				<div className="edit-profile-col-40 selection">
 					<Tabs tabArray={tabs} current={currentTab} setCurrent={setCurrentTab} />
 					{
 						currentTab === ACTOR

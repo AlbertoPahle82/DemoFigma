@@ -26,7 +26,7 @@ const EditingVoice = memo(props => {
 			<ul>
 				{
 					voicesArr?.length > 0 && voicesArr?.map(
-						(voice, index) => <li key={'voices_'+index} className={voice.selected ? 'selected' : ''}>
+						(voice, index) => <li key={'voices_'+index} className={`full-width ${voice.selected ? 'selected' : ''}`}>
 							<button
 								className={`voice ${voice.name.toLowerCase()}`}
 								onClick={() => handleVoiceChange(index)}

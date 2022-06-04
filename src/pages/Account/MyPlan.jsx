@@ -15,14 +15,14 @@ const MyPlan = memo(() => {
 		setPlan([...newArr]);
 	}, [plan]);
 	return (
-		<div>
+		<div className="flex-container plans">
 			{
 				plan?.length && plan?.map(
 					(element, index) => <div
 						key={'planData_'+index}
 						className={`plan-container ${element?.selected ? 'selected' : ''}`}
 					>
-						<h3>{element?.title}</h3>
+						<h2>{element?.title}</h2>
 						<ul>
 							{
 								element?.options?.length > 0
@@ -38,13 +38,13 @@ const MyPlan = memo(() => {
 							<span className="currency">$</span>
 							<span className="price">{element?.price}</span>
 						</div>
-						<div>
+						<div className="mt-10 text-center">
 							{
-								currentPlanIndex === index && 'Current Plan'
+								currentPlanIndex === index && <span className="currentPlan">Current Plan</span>
 							}
 							{
 								currentPlanIndex !== index && <button
-									className="btn-grey blue-text"
+									className="btn-grey btn-text-blue btn-plans"
 									onClick={() => handleChangePlan(index)}
 								>
 									{

@@ -27,10 +27,10 @@ const Account = memo(() => {
 					<h2>My Account</h2>
 				</div>
 				<div className="col-4 text-right">
-					<button color="btn-link btn-red" onClick={() => handleLogout()}>Logout</button>
+					<button className="btn-link btn-red" onClick={() => handleLogout()}>Logout</button>
 				</div>
 			</div>
-			<div className="editing-core flex-container">
+			<div className="editing-core accounts">
 				<Tabs tabArray={tabs} current={currentTab} setCurrent={setCurrentTab} />
 				<div className="editing-core-section-container">
 					{

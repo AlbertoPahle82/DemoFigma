@@ -68,7 +68,7 @@ const Signup = () => {
 							maxLength={35}
 						/>
 					</div>
-					<div className="row">
+					<div className="row mt-20">
 						<label htmlFor="email">Email address</label>
 					</div>
 					<div className="row">
@@ -81,7 +81,7 @@ const Signup = () => {
 							required
 						/>
 					</div>
-					<div className="row">
+					<div className="row align-content-between mt-20">
 						<label htmlFor="password">New Password</label><span className={`passStrength ${passwordStrength}`}>{passwordStrength}</span>
 					</div>
 					<div className="row">
@@ -96,8 +96,8 @@ const Signup = () => {
 							maxLength={16}
 						/>
 					</div>
-					<div className="row text-center">
-						<button className="btn-green" disabled={loginResponse?.isLoading}>
+					<div className="row text-center mt-30">
+						<button type="submit" className="btn-green" disabled={loginResponse?.isLoading}>
 							{
 								loginResponse?.isLoading ? 'Loading...' : 'Signup'
 							}
@@ -106,7 +106,7 @@ const Signup = () => {
 				</form>
 			</div>
 			<div className="login-signup">
-				<label htmlFor="signup">Already user?</label><button id="signup" className="btn-link" onClick={() => navigate(ROOT)}>Login</button>
+				<label htmlFor="signup">Already user? </label><button id="signup" className="btn-link" onClick={() => navigate(ROOT)}>Login</button>
 			</div>
 		</div>
 	);
