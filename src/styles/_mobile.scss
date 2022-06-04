@@ -2,6 +2,10 @@
 @media only screen and (max-width: 768px) { 
 	/* For mobile phones: */ 
 
+	body #root {
+		margin-top: 5px;
+	}
+
 	.col-nav {
 		width: 100%;
 		position: fixed;
@@ -43,6 +47,14 @@
 		padding-left: 10px;
 		padding-right: 10px;
 		padding-bottom: 50px;
+
+		.editing-header {
+			padding: 0px;
+
+			button {
+				margin: 5px;
+			}
+		}
 			
 		h2 {
 			font-size: fontSizes.$sizteen;
@@ -55,7 +67,8 @@
 
 		.overlay {
 			.message-editing-content {
-				margin-left: 3%;
+				margin-left: 5px;
+    			margin-top: 6px;
 			}
 		} 
 
@@ -64,8 +77,26 @@
 			max-height: 105px !important;
 		}
 
+		.edit-profile-col-40.selection {
+			ul {
+				justify-content: center;
+			}
+			.accordion-container.accordion-selected {
+				padding: 0px;
+			}
+		}
+
+		.video-gallery-container {
+			justify-content: center;
+		}
+
 		.editing-core {
 			padding-right: 0px;
+			.edit-profile-col-60 {
+				.big-picture-container {
+					margin-right: 5px;
+				}
+			}
 			&.accounts {
 				.editing-tabs {
 					left: 0;
@@ -80,11 +111,15 @@
 			}
 		}
 
-		.plans .plan-container {
-			flex: 0 0 240px;
-			left: 0px;
-			margin-bottom: 30px;
+		.plans {
+			justify-content: center;
+			.plan-container {
+				flex: 0 0 240px;
+				left: 0px;
+				margin-bottom: 30px;
+			}
 		}
+		
 
 		.billing-container table th, .billing-container table td {
 			padding-right: 40px;
