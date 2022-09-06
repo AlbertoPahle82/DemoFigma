@@ -14,7 +14,7 @@ You can find that into the src/http folder.
 
 ## Comments
 
-You can find multiple comments to explain what's happening in the code! Have fun!
+You can find multiple comments to explain what's happening in the code! Have fun! Hooray!
 
 ## Responsive layout and SCSS
 
